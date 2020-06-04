@@ -1,0 +1,42 @@
+[
+    {
+        "Artist": "The Upbeats",
+        "img": "../assets/img/artists/the-upbeats.jpg",
+        "listens": "2340 Scrobbles"
+    },
+    {
+        "Artist": "Netsky",
+        "img": "../assets/img/artists/netsky.jpg",
+        "listens": "2110 Scrobbles"
+    },
+    {
+        "Artist": "Culture Shock",
+        "img": "../assets/img/artists/culture-shock.jpg",
+        "listens": "1740 Scrobbles"
+    },
+    {
+        "Artist": "Hybrid Minds",
+        "img": "../assets/img/artists/hybrid-minds.jpg",
+        "listens": "1540 Scrobbles"
+    },
+    {
+        "Artist": "Delta Heavy",
+        "img": "../assets/img/artists/delta-heavy.jpg",
+        "listens": "1520 Scrobbles"
+    },
+    {
+        "Artist": "Wilkinson",
+        "img": "../assets/img/artists/wilkinson.jpg",
+        "listens": "1190 Scrobbles"
+    },
+    {
+        "Artist": "Fred V & Grafix",
+        "img": "../assets/img/artists/fred-v-grafix.jpg",
+        "listens": "980 Scrobbles"
+    },
+    {
+        "Artist": "Dimension",
+        "img": "../assets/img/artists/dimension.jpg",
+        "listens": "920 Scrobbles"
+    }
+]

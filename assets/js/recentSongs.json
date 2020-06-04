@@ -1,0 +1,62 @@
+[
+    {
+        "Artist": "Dimension",
+        "Song": "Devotion",
+        "img": "../assets/img/artists/dimension.jpg",
+        "lastScrobble": "Scrobbling now"
+    },
+    {
+        "Artist": "Dimension",
+        "Song": "If You Want To",
+        "img": "../assets/img/artists/dimension.jpg",
+        "lastScrobble": "Scrobbled 5 minutes ago"
+    },
+    {
+        "Artist": "Netsky",
+        "Song": "Everyday",
+        "img": "../assets/img/artists/netsky.jpg",
+        "lastScrobble": "Scrobbled 8 minutes ago"
+    },
+    {
+        "Artist": "Culture Shock",
+        "Song": "Panic Room",
+        "img": "../assets/img/artists/culture-shock.jpg",
+        "lastScrobble": "Scrobbled 23 minutes ago"
+    },
+    {
+        "Artist": "Fred V and Grafix",
+        "Song": "Ultraviolet",
+        "img": "../assets/img/artists/fred-v-grafix.jpg",
+        "lastScrobble": "Scrobbled 28 minutes ago"
+    },
+    {
+        "Artist": "Hybrid Minds",
+        "Song": "Touch",
+        "img": "../assets/img/artists/hybrid-minds.jpg",
+        "lastScrobble": "Scrobbled 33 minutes ago"
+    },
+    {
+        "Artist": "Hybrid Minds",
+        "Song": "Phoenix",
+        "img": "../assets/img/artists/hybrid-minds.jpg",
+        "lastScrobble": "Scrobbled 36 minutes ago"
+    },
+    {
+        "Artist": "The Upbeats",
+        "Song": "Uncharted",
+        "img": "../assets/img/artists/the-upbeats.jpg",
+        "lastScrobble": "Scrobbled One hour ago"
+    },
+    {
+        "Artist": "Delta Heavy",
+        "Song": "White Flag",
+        "img": "../assets/img/artists/delta-heavy.jpg",
+        "lastScrobble": "Scrobbled One hour ago"
+    },
+    {
+        "Artist": "Delta Heavy",
+        "Song": "Kaliedoscope",
+        "img": "../assets/img/artists/delta-heavy.jpg",
+        "lastScrobble": "Scrobbled One hour ago"
+    }
+]

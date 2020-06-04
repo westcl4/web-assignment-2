@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>ConorWest.fm</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+
+</head>
+
+<body>
+    <div class="banner-image">
+        <div class="profile-bar">
+            <img src="assets/img/profilePic.jpg" class="avatar" alt="Avatar" />
+            <h2 style="color: white">Conor West </h2>
+            <img src="assets/img/flag-round-250.png" class="country-flag" />
+
+        </div>
+    </div>
+    <nav>
+        <ul>
+
+            <li>
+                <a href="artists.html">Artists</a>
+                <a href="artists.html">Artists</a>
+                <a href="artists.html">Artists</a>
+                <a href="artists.html">Artists</a>
+            </li>
+            <!---->
+            <li class="rightalign">
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <h1 class="top-tracks-title">Conor's Top Tracks</h1>
+
+    <div id="recentPlaydiv">
+
+    </div>
+
+    <h1 class="top-tracks-title">Conor's Top Artists</h1>
+
+    <div id="topArtistDiv"></div>
+
+    <h1 class="top-tracks-title">Conor's Top 10 Most Scrobbled</h1>
+
+    <div id="top10Songs"></div>
+
+    <div class="spacer-div"></div>
+
+    <h1>Leave a comment</h1>
+
+    <form>
+        <label for="name"> Name:</label>
+        <br>
+        <input id="nameInput" type="text" name="name" value="Joe Bloggs">
+        <br>
+        <label for="comment"> Your Comment</label>
+        <br>
+        <input id="commentInput" type="text" size=60 value="I fucking hate DnB">
+        <br>
+        <br>
+        <input type="button" onclick="userComment()" value="Submit">  </input>
+
+    </form>
+
+    <div>
+        <table id="commentTable" >
+            <thead>
+                <th class = "comment-table">
+                    Name:
+                </th>
+                <th class = "comment-table">
+                    Comment:
+                </th>
+                <th class = "comment-table">
+                    Time:
+                </th>
+            </thead>
+        </table>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+//This function populates the Top Tracks list
+    let data = fetch("../assets/js/recentSongs.json")
+        .then(response => response.json())
+
+        .then(data => recentSongsList(data));
+        
+
+    function recentSongsList(songArray) {
+        
+        var ulist = document.createElement("ul");
+
+        
+
+        for (let i = 0; i < songArray.length; i++) {
+            var v = songArray[i];
+
+            var li = document.createElement("li");
+            li.className = "recent-list-row";
+            var divSong = document.createElement("div");
+            divSong.className = "recent-list-element";
+            var divArtist = document.createElement("div");
+            divArtist.className = "recent-list-element";
+            var divLastScr = document.createElement("div");
+            divLastScr.className = "recent-list-element";
+
+
+            var img = document.createElement("img");
+            img.src = v.img;
+            img.height = 125;
+            img.width = 125;
+            img.style = "recent-list-img";
+            li.appendChild(img);
+
+            var heart = document.createElement("img");
+            heart.src = "../assets/img/white-heart.png";
+            heart.height = 125;
+            heart.width = 125;
+            heart.id = "heart";
+            heart.style = "heart";
+            li.appendChild(heart);
+
+            divSong.innerHTML = v.Song;
+            li.appendChild(divSong);
+
+            divArtist.innerHTML = v.Artist;
+            li.appendChild(divArtist);
+
+            divLastScr.innerHTML = v.lastScrobble;
+            divLastScr.style = "align-right";
+            li.appendChild(divLastScr);
+
+            ulist.appendChild(li);
+
+        }
+
+        var app = document.querySelector("#recentPlaydiv");
+        app.appendChild(ulist);
+
+    }
+
+//This function populates the top artist section
+    let Artistdata = fetch("../assets/js/artists.json")
+        .then(response => response.json())
+
+        .then(Artistdata => artistsList(Artistdata));
+
+    function artistsList(artistArray) {
+
+        var ulist = document.createElement("ul");
+        ulist.className = "container-top-artist";
+
+        for (let i = 0; i < artistArray.length; i++) {
+
+            console.log("hello");
+
+            var v = artistArray[i];
+
+            var li = document.createElement("li");
+            li.className = "flex-item";
+
+            var divArtist = document.createElement("div");
+            divArtist.className = "flex-text";
+            var divListens = document.createElement("div");
+            divListens.className = "flex-text";
+
+            var img = document.createElement("img");
+            img.className = "flex-img";
+            img.src = v.img;
+            img.height = 130;
+            img.width = 130;
+            li.appendChild(img);
+
+            divArtist.innerHTML = v.Artist;
+            li.appendChild(divArtist);
+
+            divListens.innerHTML = v.listens;
+            li.appendChild(divListens);
+
+            ulist.appendChild(li);
+
+        }
+
+        var app = document.querySelector("#topArtistDiv");
+        app.appendChild(ulist);
+
+    }
+
+//This function populates the Top 10 song list
+    let topData = fetch("../assets/js/topSongs.json")
+        .then(response => response.json())
+
+        .then(topData => topSongsList(topData));    
+
+    function topSongsList(songArray) {
+
+        var ulist = document.createElement("ul");
+
+        for (let i = 0; i < songArray.length; i++) {
+            var v = songArray[i];
+
+            var li = document.createElement("li");
+            li.className = "recent-list-row";
+            var divSong = document.createElement("div");
+            divSong.className = "recent-list-element";
+            var divArtist = document.createElement("div");
+            divArtist.className = "recent-list-element";
+            var divScrs = document.createElement("div");
+            divScrs.className = "bar-chart";
+            divScrs.style.width = (v.Scrobbles / 7000 * 100) + "%"; 
+
+            var img = document.createElement("img");
+            img.src = v.img;
+            img.height = 85;
+            img.width = 85;
+            li.appendChild(img);
+
+            var heart = document.createElement("img");
+            heart.src = "../assets/img/white-heart.png";
+            heart.height = 125;
+            heart.width = 125;
+            heart.style = "heart";
+            heart.id = "heart";
+            li.appendChild(heart);
+
+            divArtist.innerHTML = v.Artist;
+            li.appendChild(divArtist);
+
+            divSong.innerHTML = v.Song;
+            li.appendChild(divSong);
+
+            divScrs.innerHTML = v.Scrobbles;
+            li.appendChild(divScrs);
+            ulist.appendChild(li);
+
+        }
+        var app = document.querySelector("#top10Songs");
+        app.appendChild(ulist);
+
+    }
+//This function handles the user comment system
+//Amends the user input data to a table at the bottom of the page
+    function userComment() {
+
+        var userName = document.getElementById("nameInput").value;
+        var userComment = document.getElementById("commentInput").value;
+
+        var table = document.getElementById("commentTable");
+
+        var row = table.insertRow(-1);
+
+        var cell1 = row.insertCell(0).innerHTML= userName;
+        var cell2 = row.insertCell(1).innerHTML = userComment;
+        var cell3 = row.insertCell(2).innerHTML = new Date();
+
+    }
+
+    //This function adds a heart/unheart function
+    document.getElementById("heart").addEventListener("click", heartButton)
+
+    function heartButton() {
+        document.getElementById(heart).innerHTML = img.src = "../assets/img/white-heart.png";
+        
+    }
+</script>
+
+</html>

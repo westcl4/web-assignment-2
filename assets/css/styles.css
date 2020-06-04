@@ -1,0 +1,180 @@
+body
+{
+    background-color: slategray;
+    background-image: url("assets/img/header.jpg");
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.banner-image
+{
+    background-image:url("../img/header.jpg");
+    background-repeat: no-repeat ;
+    height: 500px;
+    vertical-align: middle;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    
+    
+}
+
+.avatar 
+{
+
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px black;
+    border-radius: 50%;
+    float: left;
+}
+
+.country-flag
+{
+    width: 35px;
+}
+
+.profile-bar
+{
+    background-color: rgb(31, 34, 36);
+    width: 25%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+nav {
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
+li {
+    display: flex;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:not(:last-child) {
+    border-right: 1px solid gray;
+}
+
+li:first-child a:last-child {
+    border-right: 1px solid gray;
+}
+
+.rightalign {
+    margin-left: auto;
+}
+
+.heart{
+    
+}
+
+.recent-list-row
+{
+height: 80px;
+width: 80%;
+margin: 20px;
+padding: 50px;
+background-color: black;
+border-radius: 25px;
+}
+
+.recent-list-element
+{
+    padding: 25px;
+    min-width: 140px;
+    height: 20px;
+    
+}
+
+.recent-list-img
+{
+    align-self: center;
+}
+
+.container-top-artist
+{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    padding-left: 35px;
+}
+
+.flex-item 
+{
+    background: black;
+    padding: 5px;
+    width: 370px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 20;
+    text-align: center;
+    border-radius: 25px;
+    margin: 5px;
+  }
+
+  .flex-text
+  {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px; 
+    height: 30px;
+    position: initial;
+  }
+
+  .flex-img
+  {
+    align-self: center;
+  }
+
+ .top-tracks-title 
+ {
+    text-align: center;
+    color: white;
+ }
+
+ .bar-chart
+ {
+     background-color: rgb(46, 44, 44);
+     max-width: 500px;
+     text-align: center;
+ }
+
+ .spacer-div
+ {
+     height: 50px;
+     padding: 10px;
+     margin: auto;
+ }
+
+ table
+ {
+     border: 1px solid white;
+     padding: 5px;
+     border-collapse: collapse;
+     width: 60%;  
+ }
+
+ table, th, td
+ {
+    border: 1px solid white;
+     padding: 10px;   
+ }
+
